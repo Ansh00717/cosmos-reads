@@ -2,7 +2,7 @@ export interface Book {
   id: string;
   title: string;
   author: string;
-  coverImage: string; // Local image path in Books folder
+  coverImage: string; // Local image path in public/images folder
   category: Category;
   keywords?: string[]; // Optional search keywords for alternative spellings, character names, etc.
 }
