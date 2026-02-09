@@ -1,0 +1,54 @@
+/* Book Cover Glow Effect - Inspired by multi-point button glow */
+
+.book-cover-glow {
+  position: relative;
+  border-radius: 0.5rem;
+  box-shadow: 
+    0 4px 6px -1px rgba(0, 0, 0, 0.3),
+    0 2px 4px -2px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.3s ease-out, transform 0.3s ease-out;
+}
+
+/* Multi-point glow effect on hover */
+.group:hover .book-cover-glow {
+  box-shadow: 
+    /* Corner glows - subtle multi-point effect */
+    -12px -8px 25px -8px var(--glow-color),
+    12px -8px 25px -8px var(--glow-color),
+    12px 8px 25px -8px var(--glow-color),
+    -12px 8px 25px -8px var(--glow-color),
+    /* Center glow for depth */
+    0 0 15px -3px var(--glow-color),
+    /* Keep the base shadow */
+    0 10px 30px -10px rgba(0, 0, 0, 0.4);
+}
+
+/* Subtle border highlight on hover */
+.book-cover-glow::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 0.5rem;
+  padding: 2px;
+  background: linear-gradient(
+    135deg,
+    transparent 0%,
+    var(--primary-color) 50%,
+    transparent 100%
+  );
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+  pointer-events: none;
+}
+
+.group:hover .book-cover-glow::after {
+  opacity: 0.6;
+}

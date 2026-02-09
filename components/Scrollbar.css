@@ -1,0 +1,118 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   COSMIC SCROLLBAR - Subtle & Premium Space Theme
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* Keyframe for subtle cosmic pulse */
+@keyframes cosmicPulse {
+  0%, 100% {
+    opacity: 0.6;
+    box-shadow: 
+      0 0 4px var(--theme-glow),
+      0 0 8px rgba(255, 255, 255, 0.1);
+  }
+  50% {
+    opacity: 0.9;
+    box-shadow: 
+      0 0 8px var(--theme-glow),
+      0 0 16px rgba(255, 255, 255, 0.15);
+  }
+}
+
+/* Firefox Scrollbar */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+  transition: scrollbar-color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.custom-scrollbar:hover {
+  scrollbar-color: var(--theme-secondary) rgba(255, 255, 255, 0.03);
+}
+
+/* Webkit Scrollbar Base */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track - Subtle starfield-like appearance */
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.01) 50%,
+    transparent 100%
+  );
+  border-radius: 10px;
+  margin: 8px 0;
+}
+
+.custom-scrollbar:hover::-webkit-scrollbar-track {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.02) 0%,
+    rgba(255, 255, 255, 0.04) 50%,
+    rgba(255, 255, 255, 0.02) 100%
+  );
+}
+
+/* Thumb - Cosmic Glow Effect */
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.08) 0%,
+    rgba(255, 255, 255, 0.12) 50%,
+    rgba(255, 255, 255, 0.08) 100%
+  );
+  border-radius: 10px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Container hover - Reveal scrollbar with subtle glow */
+.custom-scrollbar:hover::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    180deg,
+    var(--theme-secondary) 0%,
+    var(--theme-primary) 50%,
+    var(--theme-secondary) 100%
+  );
+  box-shadow: 
+    0 0 6px var(--theme-glow),
+    inset 0 0 4px rgba(255, 255, 255, 0.2);
+  /* Removed continuous animation to improve scroll performance */
+}
+
+/* Direct thumb hover - Full cosmic effect */
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(
+    180deg,
+    var(--theme-primary) 0%,
+    var(--theme-secondary) 50%,
+    var(--theme-primary) 100%
+  ) !important;
+  box-shadow: 
+    0 0 12px var(--theme-glow),
+    0 0 20px var(--theme-glow),
+    inset 0 0 6px rgba(255, 255, 255, 0.3) !important;
+  animation: none;
+  transform: scaleX(1.1);
+}
+
+/* Active state - When dragging */
+.custom-scrollbar::-webkit-scrollbar-thumb:active {
+  background: linear-gradient(
+    180deg,
+    var(--theme-primary) 0%,
+    #fff 50%,
+    var(--theme-primary) 100%
+  ) !important;
+  box-shadow: 
+    0 0 16px var(--theme-glow),
+    0 0 28px var(--theme-glow) !important;
+}
+
+/* Corner styling (for dual scrollbars) */
+.custom-scrollbar::-webkit-scrollbar-corner {
+  background: transparent;
+}

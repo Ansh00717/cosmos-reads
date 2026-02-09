@@ -1,0 +1,241 @@
+/* Main Button Container - Theme Sync Style */
+.cosmos-btn {
+  /* Dimensions - Maintained for layout */
+  position: relative;
+  height: 2.8rem;
+  width: 13rem;
+  padding: 0.8em 2em;
+  
+  /* Text Styles */
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 0.2em;
+  color: #fff;
+  text-shadow: 0 0 5px var(--theme-primary);
+  text-transform: uppercase;
+  font-family: system-ui, -apple-system, sans-serif;
+
+  /* Shape & Border */
+  border-radius: 15px;
+  background-color: transparent;
+  border: 2px solid var(--theme-primary);
+  
+  /* Neon Glow - Synced */
+  box-shadow: 0 0 0px 1px var(--theme-primary),
+    0 0 10px 2px var(--theme-glow),
+    inset 0 0 0px 1px var(--theme-primary),
+    inset 0 0 10px 2px var(--theme-glow);
+    
+  /* Layout & Interaction */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 100ms ease;
+}
+
+/* Remove old background layer logic */
+.cosmos-btn .background-layer {
+  display: none;
+}
+
+/* "Join Community" Text - Static */
+.cosmos-btn .text {
+  display: grid;
+  inset: 0;
+  place-items: center;
+  position: absolute;
+  transition: opacity 0.2s ease;
+  z-index: 10;
+}
+
+/* HOVER EFFECTS */
+.cosmos-btn:hover {
+  /* Intensified Glow */
+  box-shadow: 0 0 0px 1px var(--theme-primary),
+    0 0 10px 2px var(--theme-glow),
+    inset 0 0 0px 1px var(--theme-primary),
+    inset 0 0 30px 2px var(--theme-glow);
+  text-shadow: 0 0 10px var(--theme-primary);
+  transform: translateY(-5px);
+  width: 14rem;
+}
+
+/* Hide Static Text on Hover */
+.cosmos-btn:hover .text {
+  opacity: 0;
+}
+
+/* ACTIVE STATE */
+.cosmos-btn:active {
+  box-shadow: 0 0 0px 1px var(--theme-primary),
+    0 0 25px 2px var(--theme-glow),
+    inset 0 0 0px 1px var(--theme-primary),
+    inset 0 0 30px 2px var(--theme-glow);
+  transform: translateY(1px);
+}
+
+/* ICONS LIST */
+.cosmos-btn .social-list {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  margin: 0;
+  padding: 0 10px;
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly; 
+  z-index: 20;
+}
+
+/* Individual Links */
+.cosmos-btn .social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent; 
+  color: #fff; 
+  width: 32px; 
+  height: 32px;
+  border-radius: 50%; 
+  
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  position: relative; 
+  text-decoration: none;
+  text-shadow: 0 0 5px var(--theme-primary);
+}
+
+.cosmos-btn .social-link svg {
+  width: 22px;  
+  height: 22px; 
+  transition: transform 0.2s ease;
+}
+
+/* Reveal Icons on Button Hover - Ensuring they are above marquee */
+.cosmos-btn:hover .social-link {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.cosmos-btn:hover li:nth-child(1) .social-link { transition-delay: 0.1s; }
+.cosmos-btn:hover li:nth-child(2) .social-link { transition-delay: 0.2s; }
+.cosmos-btn:hover li:nth-child(3) .social-link { transition-delay: 0.3s; }
+
+.cosmos-btn .social-link:hover {
+  background-color: rgba(255, 255, 255, 0.1); 
+  box-shadow: 0 0 10px var(--theme-primary);
+}
+
+.cosmos-btn .social-link:hover svg {
+  transform: scale(1.15); 
+}
+
+/* TOOLTIP */
+/* TOOLTIP */
+.cosmos-btn .tooltip {
+  position: absolute;
+  top: 150%; 
+  left: 50%;
+  transform: translateX(-50%) scale(0.8);
+  
+  background: rgba(15, 23, 42, 0.95);
+  color: var(--theme-primary);
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-family: sans-serif;
+  font-weight: bold;
+  white-space: nowrap;
+  letter-spacing: 0.05em;
+  
+  opacity: 0;
+  pointer-events: none;
+  border: 1px solid var(--theme-primary);
+  box-shadow: 0 0 10px var(--theme-glow);
+  text-shadow: none;
+  
+  transition: all 0.2s ease;
+}
+
+.cosmos-btn .social-link:hover .tooltip {
+  opacity: 1;
+  top: 140%; 
+  transform: translateX(-50%) scale(1);
+}
+
+
+/* Wrapper for Sparkles + Button */
+.socials-wrapper {
+  position: relative;
+  display: inline-block;
+  padding: 10px; /* Space for sparkles to extend */
+}
+
+.socials-wrapper .relative {
+  position: relative;
+  height: 100%;
+}
+
+/* Sparkle Container - Now relative to socials-wrapper */
+.sparkles-container {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 5; 
+  overflow: visible; /* Let them flow freely */
+  border-radius: inherit;
+}
+
+/* Ensure Button is above sparkles */
+.cosmos-btn {
+  /* ... existing styles ... */
+  position: relative;
+  z-index: 20; 
+  /* margin to ensure it sits nicely in wrapper if needed, handled by flex/center in parent if set, but here wrapper is inline-block + padding */
+  margin: 0 auto;
+}
+
+/* Sparkle Wrapper Common Styles */
+.animate-magic-sparkle {
+  position: absolute;
+  pointer-events: none;
+  z-index: 10;
+  animation: sparkle 2s infinite;
+}
+
+/* Sparkle SVG Common Styles */
+.sparkle-svg {
+  filter: drop-shadow(var(--theme-primary) 0px 0px 2px);
+}
+
+.animate-spin-slow {
+  animation: spin-slow 3s linear infinite;
+}
+
+/* Positioning & Delays */
+#style-AQliM { top: 1%; left: 99%; animation-delay: 0.5s; }
+#style-WCb99 { top: 7%; left: 1%; animation-delay: 0.33s; }
+#style-dBNZV { top: 93%; left: 23%; animation-delay: 0.6s; }
+#style-tiisO { top: 43%; left: 15%; animation-delay: 0.9s; }
+#style-re9B7 { top: 93%; left: 9%; animation-delay: 1.2s; }
+#style-BKG4G { top: 21%; left: 88%; animation-delay: 1.5s; }
+#style-NaoVe { top: 99%; left: 95%; animation-delay: 1.8s; }
+#style-pwIlv { top: 64%; left: 99%; animation-delay: 1.9s; }
+#style-QmcAd { top: 14%; left: 45%; animation-delay: 1.4s; }
+#style-VG2eL { top: 2%; left: 48%; animation-delay: 1.7s; }
+
+/* Keyframes */
+@keyframes sparkle {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}

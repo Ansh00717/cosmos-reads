@@ -1,0 +1,66 @@
+/* Container Button */
+.return-btn {
+  /* Transparent background - no opaque fill */
+  background-color: transparent; 
+  color: white;              
+  width: 10rem;              /* Reduced from 12rem */
+  height: 2.75rem;           /* Reduced from 3.5rem for navbar fit */
+  border-radius: 1rem;       
+  font-size: 1rem;           /* Reduced font size */
+  font-weight: 600;          
+  position: relative;        
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Added subtle border */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;          
+  transition: all 0.3s ease;
+}
+
+.return-btn:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+  background-color: transparent;
+}
+
+/* The Icon Box - Expanding Element */
+.btn-icon {
+  /* Use theme gradient */
+  background-image: linear-gradient(135deg, var(--theme-secondary), var(--theme-primary));
+  border-radius: 0.85rem;    
+  height: 100%;              /* Full height of button */
+  width: 25%;                
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  position: absolute;        
+  left: 0;                   /* No gap on left */
+  top: 0;                    /* No gap on top */
+  
+  z-index: 20;               
+  
+  transition-duration: 500ms; 
+  transition-property: width, border-radius;
+}
+
+.btn-icon svg {
+  fill: white; /* Ensure visible icon */
+}
+
+/* Text Positioning */
+.btn-text {
+  transform: translateX(0.75rem); 
+  margin: 0;
+  z-index: 10;               
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Hover Effect */
+.return-btn:hover .btn-icon {
+  width: 100%;               /* Fill entire button width */
+  border-radius: 1rem;       /* Match button border-radius */
+}
