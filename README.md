@@ -1,25 +1,152 @@
-<<<<<<< HEAD
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# 🌌 Cosmos Reads
 
-# Run and deploy your AI Studio app
+A modern, animated, and user-friendly digital reading platform built using **React + TypeScript + Vite**.
+Cosmos Reads helps users explore books across multiple categories with a smooth UI and engaging browsing experience.
 
-This contains everything you need to run your app locally.
+---
 
-View your app in AI Studio: https://ai.studio/apps/drive/1kHD0K3V5rjzObn9hcXww-mxKam1UmL19
+## ✨ Features
 
-## Run Locally
+* 📚 Browse books across multiple categories
+* 🔍 Search functionality
+* 🎨 Smooth animations and modern UI
+* ⚡ Fast performance using Vite
+* 🌐 Fully deployed using Netlify
+* 💻 Desktop optimized (Mobile responsiveness coming soon)
 
-**Prerequisites:**  Node.js
+---
 
+## 🛠 Tech Stack
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
-=======
-# cosmos-reads
-A website for books
->>>>>>> 6c7e7f9a4a35bad4be0b4dc488a6dac959e75765
+* **Frontend:** React, TypeScript
+* **Build Tool:** Vite
+* **Styling & UI:** CSS / Animations
+* **Deployment:** Netlify
+* **Version Control:** Git & GitHub
+
+---
+
+## 📂 Project Structure
+
+```
+cosmos-reads/
+│
+├── public/
+│   └── images/        # Book images and static assets
+│
+├── src/
+│   ├── components/    # Reusable UI components
+│   ├── constants/     # Static data and configurations
+│   ├── types/         # TypeScript type definitions
+│   ├── App.tsx        # Main app component
+│   └── main.tsx       # Entry point
+│
+├── package.json
+├── vite.config.ts
+└── README.md
+```
+
+---
+
+## 🚀 Getting Started
+
+Follow these steps to run the project locally.
+
+### 1️⃣ Clone the Repository
+
+```bash
+git clone https://github.com/your-username/cosmos-reads.git
+```
+
+---
+
+### 2️⃣ Navigate to Project Folder
+
+```bash
+cd cosmos-reads
+```
+
+---
+
+### 3️⃣ Install Dependencies
+
+```bash
+npm install
+```
+
+---
+
+### 4️⃣ Start Development Server
+
+```bash
+npm run dev
+```
+
+The app will run locally on:
+
+```
+http://localhost:5173
+```
+
+---
+
+## 🏗 Build for Production
+
+To create an optimized production build:
+
+```bash
+npm run build
+```
+
+---
+
+## 🌍 Deployment
+
+The website is deployed using **Netlify** with automatic CI/CD from GitHub.
+
+Every push to the `main` branch automatically redeploys the website.
+
+---
+
+## 📱 Future Improvements
+
+* Mobile & tablet responsiveness
+* Performance optimization
+* Enhanced animations
+* Book preview & reading mode
+* User favorites & bookmarking
+* Dark / Light theme toggle
+
+---
+
+## 🤝 Contributing
+
+Contributions, suggestions, and improvements are welcome.
+
+1. Fork the repository
+2. Create a new branch
+3. Commit your changes
+4. Submit a pull request
+
+---
+
+## 📄 License
+
+This project is open source and available under the MIT License.
+
+---
+
+## 👨‍💻 Author
+
+**Ansh Singh**
+
+* GitHub: [https://github.com/Ansh00717](https://github.com/Ansh00717)
+* Project: Cosmos Reads
+
+---
+
+## ⭐ Support
+
+If you like this project, consider giving it a ⭐ on GitHub.
+
+---
