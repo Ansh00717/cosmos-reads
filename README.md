@@ -1,4 +1,6 @@
-# 🌌 Cosmos Reads
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/bad55d35-7ed0-4e76-ad62-f04bed7c410c" width="1280" height="714" alt="Cosmos Reads Banner">
+</p>
 
 A modern, animated, and user-friendly digital reading platform built using **React + TypeScript + Vite**.
 Cosmos Reads helps users explore books across multiple categories with a smooth UI and engaging browsing experience.
@@ -133,15 +135,6 @@ Contributions, suggestions, and improvements are welcome.
 ## 📄 License
 
 This project is open source and available under the MIT License.
-
----
-
-## 👨‍💻 Author
-
-**Ansh Singh**
-
-* GitHub: [https://github.com/Ansh00717](https://github.com/Ansh00717)
-* Project: Cosmos Reads
 
 ---
 
