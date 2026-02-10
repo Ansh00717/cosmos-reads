@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/bad55d35-7ed0-4e76-ad62-f04bed7c410c" width="1280" height="714" alt="Cosmos Reads Banner">
+  <img src="https://github.com/user-attachments/assets/bad55d35-7ed0-4e76-ad62-f04bed7c410c" width="100%" alt="Cosmos Reads Banner">
 </p>
 
 A modern, animated, and user-friendly digital reading platform built using **React + TypeScript + Vite**.
@@ -107,17 +107,6 @@ npm run build
 The website is deployed using **Netlify** with automatic CI/CD from GitHub.
 
 Every push to the `main` branch automatically redeploys the website.
-
----
-
-## 📱 Future Improvements
-
-* Mobile & tablet responsiveness
-* Performance optimization
-* Enhanced animations
-* Book preview & reading mode
-* User favorites & bookmarking
-* Dark / Light theme toggle
 
 ---
 
